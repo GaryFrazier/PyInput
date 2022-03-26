@@ -11,8 +11,7 @@ You can install via pip
 ## Usage
 Simply pass in the window name to get the handle, then you can use press_key to send inputs for a specific timeframe and whether or not to force the window to come into the foreground.
 
-    import  pyinputkeycodes
-    import  pyinput
+    from pyinput import pyinput, pyinputkeycodes
     
 	window_name  =  "Game Window Name Here"
     hwnd  =  pyinput.get_handle(window_name) # Gets the handle
@@ -20,6 +19,9 @@ Simply pass in the window name to get the handle, then you can use press_key to 
     pyinput.press_key(hwnd, pyinputkeycodes.VK_KEY_W, 2) # Sends W key for 2 seconds
     pyinput.press_key(hwnd, pyinputkeycodes.VK_KEY_W, 2, false) # Sends W key for 2 seconds, but doesnt force foreground
 
+You can also list all the windows if you are unsure of the name
+
+    pyinput.list_windows()
 ## Keycodes
 A list of keycodes can be found here http://www.kbdedit.com/manual/low_level_vk_list.html
 If the keycode you need is not supported, you may pass it in instead.

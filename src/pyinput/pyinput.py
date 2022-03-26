@@ -1,5 +1,5 @@
 from time import sleep, time
-import pyinputkeycodes
+from pyinput import pyinputkeycodes
 import win32gui, win32ui, win32con, win32api
 
 def list_windows():
